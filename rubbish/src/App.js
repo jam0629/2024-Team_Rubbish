@@ -5,11 +5,12 @@ import OnboardingPage from "./pages/OnboardingPage";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
 import MainPage from "./pages/MainPage";
+import CleanerPage from "./pages/CleanerPage";
 
 function App() {
   return (
     <div>
-      <MainPage />
+      <CleanerPage/>
     </div>
   );
 }
