@@ -1,0 +1,14 @@
+button {
+    width: 300px;
+    height: 45px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2A63F6; /* 호버 시 배경색 */
+    color: white; /* 호버 시 글자색 */
+}

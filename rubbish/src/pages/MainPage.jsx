@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const MainPage = () => {
   useEffect(() => {
@@ -30,8 +32,15 @@ const MainPage = () => {
   }, []);
 
   return (
-    <div style={{ width: '100vw', height: '100vh' }}>
-      <div id="map" style={{ width: '100%', height: '100%' }}></div>
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+      <Header />
+      <div style={{ flex: 1, width: '100%' }}>
+        <div id="map" style={{ width: '100%', height: '100%' }}></div>
+      </div>
+      <Footer 
+        buttonText="제보하기" 
+        buttonColor="#4CAF50"
+      />
     </div>
   );
 };
