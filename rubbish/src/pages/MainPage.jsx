@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { useNavigate } from 'react-router-dom';
 
 const MainPage = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     const { kakao } = window;
 
@@ -31,6 +34,11 @@ const MainPage = () => {
     );
   }, []);
 
+  const handleButtonClick = () => {
+    console.log("제보하기버튼클릭");
+    navigate('/finder');
+  };
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
       <Header />
@@ -40,6 +48,7 @@ const MainPage = () => {
       <Footer 
         buttonText="제보하기" 
         buttonColor="#4CAF50"
+        onButtonClick={handleButtonClick} 
       />
     </div>
   );
